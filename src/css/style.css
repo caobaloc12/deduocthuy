@@ -1,0 +1,113 @@
+html, body {
+  background-color: #f6f6f6;
+  padding-top: 20px; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+#navbar-wrapper {
+  background-color: #1cb992; }
+  #navbar-wrapper .navbar-nav > li > a {
+    color: #fff; }
+    #navbar-wrapper .navbar-nav > li > a .fa.fa-home {
+      font-size: 150%; }
+  #navbar-wrapper .navbar-toggle .icon-bar {
+    background-color: #fff; }
+  #navbar-wrapper .navbar-toggle:focus, #navbar-wrapper .navbar-toggle:hover {
+    background-color: #fff; }
+    #navbar-wrapper .navbar-toggle:focus .icon-bar, #navbar-wrapper .navbar-toggle:hover .icon-bar {
+      background-color: #1cb992; }
+
+.carousel-indicators {
+  display: none; }
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .icon-prev {
+  left: 25%; }
+
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-next {
+  right: 25%; }
+
+.header-logo {
+  position: relative;
+  padding: 0 10px;
+  z-index: 1000;
+  box-shadow: 0 5px 10px #777; }
+
+.logo-wrapper {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  align-items: center; }
+  .logo-wrapper .text-info {
+    padding-left: 15px; }
+
+#content {
+  min-height: 400px;
+  padding-top: 40px; }
+
+#footer {
+  background-color: #3c3c3c;
+  color: #fefefe; }
+  #footer .inner {
+    padding-top: 15px;
+    padding-bottom: 15px; }
+  #footer .copyright {
+    background-color: #24282e;
+    color: #ededed;
+    padding-top: 5px; }
+  #footer a {
+    color: #1cb992; }
+
+@media (min-width: 768px) {
+  #navbar-wrapper {
+    height: 35px;
+    min-height: 35px;
+    border-radius: 0;
+    font-size: 13px; }
+    #navbar-wrapper .navbar-nav {
+      float: none;
+      display: flex;
+      justify-content: center; }
+    #navbar-wrapper .navbar-nav > li > a {
+      padding-top: 5px;
+      padding-bottom: 5px; } }
+
+.h2-custom, #benh-smg h2, #gioi-thieu-thuoc h2 {
+  color: #e43e3e;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #1cb992;
+  display: inline-block;
+  margin-bottom: 20px; }
+
+#benh-smg .box {
+  margin-bottom: 20px; }
+  #benh-smg .box img {
+    max-width: 100%;
+    height: auto; }
+  #benh-smg .box .link-title {
+    display: block;
+    color: #1cb992;
+    margin: 20px 0;
+    font-weight: bold; }
+
+#gioi-thieu-thuoc {
+  padding-bottom: 20px; }
+  #gioi-thieu-thuoc .text-wrap {
+    background: #ffffff;
+    padding: 15px;
+    box-shadow: 0 5px 10px #555;
+    margin-bottom: 20px; }
+  #gioi-thieu-thuoc p, #gioi-thieu-thuoc a {
+    font-size: 13px;
+    line-height: 1.25;
+    color: #1cb992; }
+  #gioi-thieu-thuoc a {
+    font-weight: bold; }
+  @media (min-width: 992px) {
+    #gioi-thieu-thuoc p, #gioi-thieu-thuoc a {
+      font-size: 15px;
+      line-height: 1.3; } }
