@@ -6,6 +6,9 @@ img {
   max-width: 100%;
   height: auto; }
 
+.bg-white {
+  background-color: #fff; }
+
 #navbar-wrapper {
   background-color: #1cb992; }
   #navbar-wrapper .navbar-nav > li > a {
@@ -83,16 +86,28 @@ img {
   display: inline-block;
   margin-bottom: 20px; }
 
+.green {
+  color: #1cb992;
+  font-weight: bold;
+  text-transform: uppercase; }
+
 #benh-smg .box {
-  margin-bottom: 20px; }
+  margin-bottom: 30px; }
+  #benh-smg .box:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); }
   #benh-smg .box img {
     max-width: 100%;
-    height: auto; }
+    width: 100%;
+    max-height: 180px;
+    height: auto;
+    object-fit: cover;
+    object-position: center; }
   #benh-smg .box .link-title {
     display: block;
     color: #1cb992;
     margin: 20px 0;
-    font-weight: bold; }
+    font-weight: bold;
+    padding: 0 20px 20px 20px; }
 
 #gioi-thieu-thuoc {
   padding-bottom: 20px; }
