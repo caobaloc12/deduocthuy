@@ -13,8 +13,15 @@ img{
     max-width: 100%;
     height: auto;
 }
+.breadcrumb{
+    background-color: #fff;
+
+}
 .bg-white{
     background-color: #fff;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    border-radius: 4px;
 }
 
 #navbar-wrapper{
@@ -55,9 +62,11 @@ img{
 
 .header-logo{
     position: relative;
+    top: -5px;
     padding: 0 10px;
+    background: #ffffff;
     z-index: 1000;    
-    box-shadow: 0 5px 10px #777;
+    box-shadow: 0 5px 10px #777;    
 }
 
 .logo-wrapper{
@@ -65,9 +74,20 @@ img{
     display: -moz-flex;
     display: flex;
     align-items: center;    
+    justify-content: space-between;
+
     .text-info{
-        padding-left: 15px;
+        padding-right: 15px;
     }
+    .tu-van{
+        float: right;    
+    }
+}   
+
+.carousel-wrapper{
+    margin-top: 20px;
+    margin-bottom: 20px;
+
 }
 
 #content{
@@ -181,4 +201,9 @@ img{
             line-height: 1.3;
         }
     }
+}
+
+.form-lien-he{
+    padding: 40px 0;
+    margin-bottom: 50px;
 }
