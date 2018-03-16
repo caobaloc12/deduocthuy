@@ -1,12 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&subset=vietnamese');
+
 
 $green: #1cb992;
 $red: #ed3237;
 $gray: #3c3c3c;
 $dark: #24282e;
 
+$primaryFont: 'Source Sans Pro';
+$secondaryFont: 'Dancing Script';
+
 html,body{
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
     background-color: #f6f6f6;
-    padding-top: 20px;
+    padding-top: 20px;    
 }
 
 img{
@@ -67,6 +74,10 @@ img{
     background: #ffffff;
     z-index: 1000;    
     box-shadow: 0 5px 10px #777;    
+    h1{
+        font-family: $secondaryFont;
+        font-weight: bold;
+    }
 }
 
 .logo-wrapper{
@@ -206,4 +217,58 @@ img{
 .form-lien-he{
     padding: 40px 0;
     margin-bottom: 50px;
+}
+
+.feedback {
+    .box {
+        padding: 15px;
+        border: 1px solid rgba(210, 211, 210, 0.829);
+        border-radius: 4px;
+        margin-bottom: 15px;
+    }
+    .dc{
+        font-size: 14px;
+        font-weight: normal;
+        font-style: italic;
+        color: #777;
+    }
+    .benh-nhan {
+        font-size: 14px;
+        font-weight: bold;
+        color: #365899;
+    }
+    .phan-hoi {
+        font-size: 14px;
+
+    }
+}
+
+#myCarousel{
+    width: 30%;
+    margin: 20px auto;
+}
+
+.gia{
+    background: rgb(250, 60, 60);
+    color: #ffffff;
+    display: inline-block;
+    font-size: 200%;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+.red{
+    color: rgb(250, 60, 60);
+    font-weight: bold;
+    font-style: italic;
+}
+.secondary-font{
+    font-family: $secondaryFont;
+    font-weight: bold;
+}
+.slogan{
+    @extend .secondary-font;
+    text-align: center;
+    font-size: 36px;
+    margin: 20px auto;
 }
