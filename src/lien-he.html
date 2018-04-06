@@ -87,22 +87,22 @@
                 </p>
                 <br>
 
-                <form action="">
+                <form action="" id="contactForm">
                     <div class="form-group">
                         <label for="name">Tên của bạn:</label>
-                        <input type="text" class="form-control" name="name" id="name" required>
+                        <input type="text" class="form-control" name="entry.1166669904" id="name" required>
                     </div>
                     <div class="form-group">
                         <label for="phone">Số điện thoại:</label>
-                        <input type="text" class="form-control" name="phone" id="phone" required>
+                        <input type="text" class="form-control" name="entry.1959275432" id="phone" required>
                     </div>
                     <div class="form-group">
                         <label for="thuoc">Thuốc mà bạn quan tâm:</label>
-                        <input type="text" class="form-control" id="thuoc" name="thuoc" required>
+                        <input type="text" class="form-control" id="thuoc" name="entry.737328412" required>
                     </div>
                     <div class="form-group">
                         <label for="note">Thông điệp:</label>
-                        <textarea class="form-control" rows="5" id="note"></textarea>
+                        <textarea class="form-control" rows="5" id="note" name="entry.697712659"></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Gửi</button>
@@ -215,6 +215,18 @@
             </script> -->
     </div>
 
+    <div id="successModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header" style="border: none">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <p style="padding: 15px; text-align: center; font-size: 20px">Cảm ơn bạn đã để lại thông tin. <br> Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất!</p>
+                
+            </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
     <div id="fb-root"></div>
     <script>
         (function (d, s, id) {
@@ -230,6 +242,40 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            var endpoint = "https://docs.google.com/forms/d/e/1FAIpQLSc-6o4OSIL1-SsTtENnzjUom2TIXmAp62eufxykjT4U88cbvQ/formResponse";
+
+            var data = {
+                "entry.1166669904": $("#name").val(),
+                "entry.1959275432": $("#phone").val(),
+                "entry.737328412": $("#thuoc").val(),
+                "entry.697712659": $("#note").val(),
+            };
+
+            $("#contactForm").on("submit", (e) => {
+                e.preventDefault();
+                var str = $("#contactForm").serialize();
+                $.ajax({
+                    url: endpoint,
+                    method: "POST",
+                    dataType: "xml",
+                    data: str,
+                    statusCode: {
+                        0: () => {
+                            $("#contactForm").find("input[type=text], textarea").val("");
+                            $("#successModal").modal();
+                        },
+                        200: () => {
+                            $("#contactForm").find("input[type=text], textarea").val("");
+                            $("#successModal").modal();
+                        }
+                    }
+                })
+            });
+        })
+        
+    </script>
 </body>
 
 </html>
